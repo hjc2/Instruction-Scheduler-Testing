@@ -1,0 +1,171 @@
+nodes:
+      n1 : loadI 1 => r24
+      n2 : loadI 2 => r34
+      n3 : loadI 4 => r3
+      n4 : loadI 1 => r22
+      n5 : loadI 2048 => r21
+      n6 : add r22, r34 => r20
+      n7 : add r24, r34 => r33
+      n8 : add r20, r33 => r18
+      n9 : add r24, r33 => r32
+      n10 : add r18, r32 => r16
+      n11 : add r24, r32 => r31
+      n12 : add r16, r31 => r14
+      n13 : add r24, r31 => r30
+      n14 : add r14, r30 => r12
+      n15 : add r24, r30 => r29
+      n16 : add r12, r29 => r10
+      n17 : add r24, r29 => r28
+      n18 : add r10, r28 => r8
+      n19 : add r24, r28 => r27
+      n20 : add r8, r27 => r6
+      n21 : add r24, r27 => r26
+      n22 : add r6, r26 => r4
+      n23 : add r24, r26 => r25
+      n24 : add r4, r25 => r0
+      n25 : add r24, r25 => r23
+      n26 : store r22 => r21
+      n27 : add r21, r3 => r19
+      n28 : store r20 => r19
+      n29 : add r19, r3 => r17
+      n30 : store r18 => r17
+      n31 : add r17, r3 => r15
+      n32 : store r16 => r15
+      n33 : add r15, r3 => r13
+      n34 : store r14 => r13
+      n35 : add r13, r3 => r11
+      n36 : store r12 => r11
+      n37 : add r11, r3 => r9
+      n38 : store r10 => r9
+      n39 : add r9, r3 => r7
+      n40 : store r8 => r7
+      n41 : add r7, r3 => r5
+      n42 : store r6 => r5
+      n43 : add r5, r3 => r2
+      n44 : store r4 => r2
+      n45 : add r2, r3 => r1
+      n46 : store r0 => r1
+      n47 : output  2048
+      n48 : output  2052
+      n49 : output  2056
+      n50 : output  2060
+      n51 : output  2064
+      n52 : output  2068
+      n53 : output  2072
+      n54 : output  2076
+      n55 : output  2080
+      n56 : output  2084
+edges:
+      n1 : { }
+      n2 : { }
+      n3 : { }
+      n4 : { }
+      n5 : { }
+      n6 : { n2 , n4 }
+      n7 : { n1 , n2 }
+      n8 : { n6 , n7 }
+      n9 : { n1 , n7 }
+      n10 : { n8 , n9 }
+      n11 : { n1 , n9 }
+      n12 : { n10 , n11 }
+      n13 : { n1 , n11 }
+      n14 : { n12 , n13 }
+      n15 : { n1 , n13 }
+      n16 : { n14 , n15 }
+      n17 : { n1 , n15 }
+      n18 : { n16 , n17 }
+      n19 : { n1 , n17 }
+      n20 : { n18 , n19 }
+      n21 : { n1 , n19 }
+      n22 : { n20 , n21 }
+      n23 : { n1 , n21 }
+      n24 : { n22 , n23 }
+      n25 : { n1 , n23 }
+      n26 : { n4 , n5 }
+      n27 : { n3 , n5 }
+      n28 : { n6 , n26 , n27 }
+      n29 : { n3 , n27 }
+      n30 : { n8 , n28 , n29 }
+      n31 : { n3 , n29 }
+      n32 : { n10 , n30 , n31 }
+      n33 : { n3 , n31 }
+      n34 : { n12 , n32 , n33 }
+      n35 : { n3 , n33 }
+      n36 : { n14 , n34 , n35 }
+      n37 : { n3 , n35 }
+      n38 : { n16 , n36 , n37 }
+      n39 : { n3 , n37 }
+      n40 : { n18 , n38 , n39 }
+      n41 : { n3 , n39 }
+      n42 : { n20 , n40 , n41 }
+      n43 : { n3 , n41 }
+      n44 : { n22 , n42 , n43 }
+      n45 : { n3 , n43 }
+      n46 : { n24 , n44 , n45 }
+      n47 : { n46 }
+      n48 : { n46 , n47 }
+      n49 : { n46 , n48 }
+      n50 : { n46 , n49 }
+      n51 : { n46 , n50 }
+      n52 : { n46 , n51 }
+      n53 : { n46 , n52 }
+      n54 : { n46 , n53 }
+      n55 : { n46 , n54 }
+      n56 : { n46 , n55 }
+weights:
+      n1 : 40
+      n2 : 42
+      n3 : 42
+      n4 : 44
+      n5 : 44
+      n6 : 41
+      n7 : 39
+      n8 : 38
+      n9 : 36
+      n10 : 35
+      n11 : 33
+      n12 : 32
+      n13 : 30
+      n14 : 29
+      n15 : 27
+      n16 : 26
+      n17 : 24
+      n18 : 23
+      n19 : 21
+      n20 : 20
+      n21 : 18
+      n22 : 17
+      n23 : 15
+      n24 : 14
+      n25 : 1
+      n26 : 43
+      n27 : 41
+      n28 : 40
+      n29 : 38
+      n30 : 37
+      n31 : 35
+      n32 : 34
+      n33 : 32
+      n34 : 31
+      n35 : 29
+      n36 : 28
+      n37 : 26
+      n38 : 25
+      n39 : 23
+      n40 : 22
+      n41 : 20
+      n42 : 19
+      n43 : 17
+      n44 : 16
+      n45 : 14
+      n46 : 13
+      n47 : 10
+      n48 : 9
+      n49 : 8
+      n50 : 7
+      n51 : 6
+      n52 : 5
+      n53 : 4
+      n54 : 3
+      n55 : 2
+      n56 : 1

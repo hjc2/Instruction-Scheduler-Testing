@@ -1,0 +1,17 @@
+//NAME: COMP412
+//NETID: comp412
+//SIM INPUT: -i 1024 2 4 8
+//OUTPUT: 2032
+//
+loadI	1024	=> r1
+load	r1	=> r2
+mult	r1,r2	=> r3
+loadI	1028	=> r4
+load    r4      => r4
+sub	r4, r2	=> r5
+loadI	1032	=> r6
+load    r6      => r6
+mult	r5, r6	=> r7
+sub	r3, r7	=> r8
+store	r8	=> r1
+output	1024

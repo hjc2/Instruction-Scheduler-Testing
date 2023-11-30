@@ -1,0 +1,93 @@
+nodes:
+      n1 : loadI 1 => r8
+      n2 : loadI 2 => r19
+      n3 : loadI 3 => r17
+      n4 : loadI 4 => r13
+      n5 : loadI 5 => r10
+      n6 : mult r19, r19 => r6
+      n7 : mult r17, r17 => r18
+      n8 : mult r13, r13 => r16
+      n9 : mult r10, r10 => r15
+      n10 : mult r17, r18 => r4
+      n11 : mult r13, r16 => r14
+      n12 : mult r10, r15 => r12
+      n13 : mult r13, r14 => r2
+      n14 : mult r10, r12 => r11
+      n15 : mult r10, r11 => r0
+      n16 : loadI 1000 => r9
+      n17 : loadI 1004 => r7
+      n18 : loadI 1008 => r5
+      n19 : loadI 1012 => r3
+      n20 : loadI 1016 => r1
+      n21 : store r8 => r9
+      n22 : store r6 => r7
+      n23 : store r4 => r5
+      n24 : store r2 => r3
+      n25 : store r0 => r1
+      n26 : output  1000
+      n27 : output  1004
+      n28 : output  1008
+      n29 : output  1012
+      n30 : output  1016
+edges:
+      n1 : { }
+      n2 : { }
+      n3 : { }
+      n4 : { }
+      n5 : { }
+      n6 : { n2 }
+      n7 : { n3 }
+      n8 : { n4 }
+      n9 : { n5 }
+      n10 : { n3 , n7 }
+      n11 : { n4 , n8 }
+      n12 : { n5 , n9 }
+      n13 : { n4 , n11 }
+      n14 : { n5 , n12 }
+      n15 : { n5 , n14 }
+      n16 : { }
+      n17 : { }
+      n18 : { }
+      n19 : { }
+      n20 : { }
+      n21 : { n1 , n16 }
+      n22 : { n6 , n17 , n21 }
+      n23 : { n10 , n18 , n22 }
+      n24 : { n13 , n19 , n23 }
+      n25 : { n15 , n20 , n24 }
+      n26 : { n25 }
+      n27 : { n25 , n26 }
+      n28 : { n25 , n27 }
+      n29 : { n25 , n28 }
+      n30 : { n25 , n29 }
+weights:
+      n1 : 21
+      n2 : 20
+      n3 : 19
+      n4 : 18
+      n5 : 17
+      n6 : 19
+      n7 : 18
+      n8 : 17
+      n9 : 16
+      n10 : 16
+      n11 : 15
+      n12 : 14
+      n13 : 13
+      n14 : 12
+      n15 : 10
+      n16 : 21
+      n17 : 18
+      n18 : 15
+      n19 : 12
+      n20 : 9
+      n21 : 20
+      n22 : 17
+      n23 : 14
+      n24 : 11
+      n25 : 8
+      n26 : 5
+      n27 : 4
+      n28 : 3
+      n29 : 2
+      n30 : 1

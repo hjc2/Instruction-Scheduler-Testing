@@ -1,0 +1,75 @@
+nodes:
+      n1 : loadI 1024 => r17
+      n2 : loadI 1028 => r16
+      n3 : load r17 => r15
+      n4 : load r16 => r10
+      n5 : loadI 1032 => r1
+      n6 : loadI 1036 => r12
+      n7 : loadI 1040 => r11
+      n8 : loadI 1044 => r6
+      n9 : store r15 => r1
+      n10 : add r15, r10 => r14
+      n11 : store r14 => r12
+      n12 : add r14, r10 => r13
+      n13 : store r13 => r11
+      n14 : store r10 => r6
+      n15 : load r1 => r9
+      n16 : load r12 => r8
+      n17 : load r11 => r5
+      n18 : lshift r9, r10 => r7
+      n19 : mult r7, r8 => r4
+      n20 : load r6 => r3
+      n21 : mult r4, r5 => r2
+      n22 : mult r2, r3 => r0
+      n23 : store r0 => r1
+      n24 : output  1032
+edges:
+      n1 : { }
+      n2 : { }
+      n3 : { n1 }
+      n4 : { n2 }
+      n5 : { }
+      n6 : { }
+      n7 : { }
+      n8 : { }
+      n9 : { n3 , n4 , n5 }
+      n10 : { n3 , n4 }
+      n11 : { n3 , n4 , n6 , n9 , n10 }
+      n12 : { n4 , n10 }
+      n13 : { n3 , n4 , n7 , n11 , n12 }
+      n14 : { n3 , n4 , n8 , n13 }
+      n15 : { n5 , n14 }
+      n16 : { n6 , n14 }
+      n17 : { n7 , n14 }
+      n18 : { n4 , n15 }
+      n19 : { n16 , n18 }
+      n20 : { n8 , n14 }
+      n21 : { n17 , n19 }
+      n22 : { n20 , n21 }
+      n23 : { n3 , n4 , n5 , n14 , n15 , n16 , n17 , n20 , n22 }
+      n24 : { n23 }
+weights:
+      n1 : 30
+      n2 : 30
+      n3 : 29
+      n4 : 29
+      n5 : 27
+      n6 : 24
+      n7 : 21
+      n8 : 18
+      n9 : 26
+      n10 : 24
+      n11 : 23
+      n12 : 21
+      n13 : 20
+      n14 : 17
+      n15 : 14
+      n16 : 13
+      n17 : 11
+      n18 : 11
+      n19 : 10
+      n20 : 9
+      n21 : 8
+      n22 : 6
+      n23 : 4
+      n24 : 1
