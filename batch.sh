@@ -25,7 +25,7 @@ for input_file in "$input_dir"/*.i; do
     file_name=$(basename "${input_file%.*}")
     output_file="$output_dir/$file_name.out"
 
-    ./tipc.exe "$input_file" > "$output_file" 2>&1
+    ./tipc "$input_file" > "$output_file" 2>&1
 
     if [ $? -eq 0 ]; then
         echo "Execution successful: $input_file"
