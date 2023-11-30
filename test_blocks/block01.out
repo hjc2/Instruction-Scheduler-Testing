@@ -1,0 +1,33 @@
+nodes:
+      n1 : loadI 128 => r1
+      n2 : load r1 => r2
+      n3 : loadI 132 => r7
+      n4 : load r7 => r4
+      n5 : loadI 136 => r6
+      n6 : load r6 => r5
+      n7 : mult r4, r5 => r3
+      n8 : add r2, r3 => r0
+      n9 : store r0 => r1
+      n10 : output  128
+edges:
+      n1 : { }
+      n2 : { n1 }
+      n3 : { }
+      n4 : { n3 }
+      n5 : { }
+      n6 : { n5 }
+      n7 : { n4 , n6 }
+      n8 : { n2 , n7 }
+      n9 : { n1 , n2 , n4 , n6 , n8 }
+      n10 : { n9 }
+weights:
+      n1 : 9
+      n2 : 8
+      n3 : 11
+      n4 : 10
+      n5 : 11
+      n6 : 10
+      n8 : 5
+      n9 : 4
+      n10 : 1
+      n7 : 7
